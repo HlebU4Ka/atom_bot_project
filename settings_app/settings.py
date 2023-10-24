@@ -13,9 +13,9 @@ from datetime import timedelta
 from pathlib import Path
 import dj_database_url
 from decouple import config
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -27,7 +27,6 @@ SECRET_KEY = 'django-insecure-9ya%3p+=$kh1o@(ghww%7b68t1mgf7xf1w25*nnlrd#@6y$k5j
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -53,8 +52,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'corsheaders.middleware.CorsMiddleware'
-
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware'
 
 ]
 
@@ -77,7 +76,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'settings_app.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -111,7 +109,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
@@ -122,7 +119,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
@@ -135,7 +131,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'users.CustomUser'
 
-
 CELERY_BROKER_URL = 'redis://localhost:6379/0'
 CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
 CELERY_IMPORTS = 'settings_app.tasks'
@@ -143,6 +138,19 @@ CELERY_IMPORTS = 'settings_app.tasks'
 CELERY_BEAT_SCHEDULE = {
     'send-messages-to-users': {
         'task': 'settings_app.tasks.send_messages_to_users',
-        'schedule': timedelta(hours=1),  #выполнить каждый час
+        'schedule': timedelta(hours=1),  # выполнить каждый час
     },
 }
+
+CORS_ALLOW_METHODS = [
+    'DELETE',  # Разрешить HTTP-метод DELETE
+    'GET',  # Разрешить HTTP-метод GET
+    'OPTIONS',  # Разрешить HTTP-метод OPTIONS
+    'PATCH',  # Разрешить HTTP-метод PATCH
+    'POST',  # Разрешить HTTP-метод POST
+    'PUT',  # Разрешить HTTP-метод PUT
+]
+
+CORS_ALLOW_ALL_ORIGINS = True  # Разрешить доступ со всех источников
+
+CORS_ALLOW_CREDENTIALS = True  # Разрешить отправку кук и заголовков аутентификации
