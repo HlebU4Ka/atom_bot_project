@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "atom-bot-project"
+version = "0.1.0"
+description = ""
+authors = ["glebk <glebkot57@gmail.com>"]
+readme = "README.md"
+packages = [{include = "atom_bot_project"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+djangorestframework = "^3.14.0"
+django-perms = "^2.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
