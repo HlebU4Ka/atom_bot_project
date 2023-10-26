@@ -16,14 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from habits.views import HabitList, HabitDelete
-from users.views import UserList, UserDetail
+from habits.views import HabitList, HabitDelete, PublicHabitList
+from users.views import UserList, UserDetail, UserRegistrationView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', UserList.as_view(), name='user-list'),  # URL-маршруты для пользователей из приложения "users"
     path('users/<int:pk>/', UserDetail.as_view(), name='user-detail'),
-
+    path('register/', UserRegistrationView.as_view(), name='user-registration'),
     path('habits/', HabitList.as_view(), name='habit-list'),  # URL-маршруты для привычек из приложения "habits"
     path('habits/<int:pk>/', HabitDelete.as_view(), name='habit-detail'),
+    path('public_habits/', PublicHabitList.as_view(), name='public-habit-list')
 ]

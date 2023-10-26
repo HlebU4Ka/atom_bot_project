@@ -69,7 +69,9 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     name = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
-
+    chat_id = models.CharField(max_length=255, blank=True, null=True)  # Поле для хранения chat_id телеграма
+    telegram_username = models.CharField(max_length=255, blank=True,
+                                         null=True)  # Поле для хранения имени пользователя в телеграме
     objects = CustomUserManager()
 
     USERNAME_FIELD = 'email'

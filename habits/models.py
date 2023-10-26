@@ -1,5 +1,6 @@
 from django.db import models
 from settings_app import settings
+from django.core.exceptions import ValidationError
 
 
 # Create your models here.
@@ -43,6 +44,32 @@ class Habit(models.Model):
     time_required = models.PositiveIntegerField()
     is_public = models.BooleanField(default=False)
     status = models.CharField(max_length=100)
+
+    def save(self, *args, **kwargs):
+        # Выполняем валидацию перед сохранением привычки
+        self.full_clean()
+        super(Habit, self).save(*args, **kwargs)
+
+    def clean(self):
+        # Валидация связанной с привычкой привычки
+        if self.related_habit and self.related_habit.is_rewarding_habit:
+            raise ValidationError("Связанная с этой привычка не может быть полезной")
+            # Валидация времени, требуемого для выполнения привычки
+        if self.time_required > 120:
+            raise ValidationError("Требуемое время не может превышать 120 секунд")
+
+            # Валидация частоты выполнения привычки
+        if self.frequency < 7:
+            raise ValidationError("Периодичность применения привычки не может быть менее 7 дней.")
+
+            # Валидация вознаграждающей привычки
+        if self.is_rewarding_habit and (self.reward or self.related_habit):
+            raise ValidationError(
+                "Вознаграждающая привычка не может иметь вознаграждения или связанной с ней привычки.")
+
+            # Валидация общественной привычки
+        if self.is_public and (self.is_rewarding_habit or self.related_habit):
+            raise ValidationError("Общественная привычка не может быть полезной или иметь связанную с ней привычку.")
 
     def __unicode__(self):
         return self.action
