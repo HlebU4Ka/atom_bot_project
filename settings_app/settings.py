@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
     "habits",
-    'users'
+    'users',
+    'drf_yasg'
 ]
 
 MIDDLEWARE = [
@@ -154,3 +155,9 @@ CORS_ALLOW_METHODS = [
 CORS_ALLOW_ALL_ORIGINS = True  # Разрешить доступ со всех источников
 
 CORS_ALLOW_CREDENTIALS = True  # Разрешить отправку кук и заголовков аутентификации
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,
+}

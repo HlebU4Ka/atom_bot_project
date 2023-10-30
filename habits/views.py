@@ -11,7 +11,7 @@ from rest_framework.pagination import PageNumberPagination
 class HabitList(generics.ListCreateAPIView):
     queryset = Habit.objects.all()
     serializer_class = HabitSerializer
-    permissions_class = PageNumberPagination
+    pagination_class = PageNumberPagination
     """
       Список и создание привычек.
 
