@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+import os
 from datetime import timedelta
 from pathlib import Path
 import dj_database_url
@@ -84,6 +85,8 @@ WSGI_APPLICATION = 'settings_app.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(default=config('DATABASE_URL'), engine='django.db.backends.postgresql_psycopg2')
 }
+
+TELEGRAM_BOT_API_KEY = os.environ.get("TELEGRAM_BOT_API_KEY")
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

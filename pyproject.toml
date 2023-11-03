@@ -10,6 +10,8 @@ packages = [{include = "atom_bot_project"}]
 python = "^3.11"
 djangorestframework = "^3.14.0"
 django-perms = "^2.1.0"
+requests = "^2.31.0"
+telegram = "^0.0.1"
 
 
 [build-system]
