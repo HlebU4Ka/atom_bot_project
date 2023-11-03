@@ -22,3 +22,22 @@ def send_messages_to_users():
         if chat_id:
             message = 'Содержание вашего сообщения'
             bot.send_message(chat_id=chat_id, text=message)
+
+
+# def register(update: Update, context: CallbackContext):
+#     update.message.reply_text("Давайте начнем процесс регистрации. Введите /cancel, чтобы отменить его.")
+#     return start_registration(update, context)
+# updater = Updater("YOUR_BOT_TOKEN", use_context=True)
+#
+# dp = updater.dispatcher
+# dp.add_handler(CommandHandler("register", register))
+# conv_handler = ConversationHandler(
+#     entry_points=[CommandHandler("register", register)],
+#     states={
+#         USER_ID: [MessageHandler(Filters.text, receive_user_id)],
+#     },
+#     fallbacks=[],
+# )
+# dp.add_handler(conv_handler)
+#
+# updater.start_polling()

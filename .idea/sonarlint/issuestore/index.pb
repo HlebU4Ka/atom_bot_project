@@ -131,3 +131,11 @@ G.idea/sonarlint/issuestore/5/f/5fc54a09665485d90807a8e72925d27743a0db75,b\8\b8
 Q.idea/sonarlint/securityhotspotstore/3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a,4\e\4ead0a9bb92d8636c4ad5a0ef56838d8b7bd33d6
 w
 G.idea/sonarlint/issuestore/f/1/f121007a966dcbe0e6d77b6ca09948108f3edfbb,3\8\388a71f8f056483fca012e1ed5ad7a209561bfc9
+s
+Cusers/migrations/0003_customuser_massage_text_customuser_user_id.py,b\1\b134152789d43d453724cbcd217916fde1e85f3d
+>
+pyproject.toml,5\d\5d07e7d72637aa0d59c89d381fe6dc4cf46e2491
+;
+poetry.lock,0\0\0068a1506b061a8948c37d78b0dd5697211558d3
+H
+settings_app/telegram.py,3\a\3a85d84eb49766e9552d7713a23f87ade03aa152
