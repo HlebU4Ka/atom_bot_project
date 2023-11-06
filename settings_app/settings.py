@@ -38,11 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_celery_beat'
     "rest_framework",
     "corsheaders",
     "habits",
     'users',
     'drf_yasg'
+
 ]
 
 MIDDLEWARE = [
@@ -135,13 +137,15 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'users.CustomUser'
 
-CELERY_BROKER_URL = 'redis://localhost:6379/0'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
-CELERY_IMPORTS = 'settings_app.tasks'
-
+CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_IMPORTS = ['users.tasks']
+CELERY_TIMEZONE = "Europe/Moscow"
+CELERY_TASK_TRACK_STARTED = True
+CELERY_TASK_TIME_LIMIT = 30 * 60
 CELERY_BEAT_SCHEDULE = {
     'send-messages-to-users': {
-        'task': 'settings_app.tasks.send_messages_to_users',
+        'task': 'tasks.send_messages_to_users',
         'schedule': timedelta(hours=1),  # выполнить каждый час
     },
 }

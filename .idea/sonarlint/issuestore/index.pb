@@ -139,3 +139,5 @@ Cusers/migrations/0003_customuser_massage_text_customuser_user_id.py,b\1\b13415
 poetry.lock,0\0\0068a1506b061a8948c37d78b0dd5697211558d3
 H
 settings_app/telegram.py,3\a\3a85d84eb49766e9552d7713a23f87ade03aa152
+?
+celery_start.py,5\7\57e5311517366d543d00b6a97fda4c5117a5f9a5
