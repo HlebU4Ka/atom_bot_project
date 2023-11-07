@@ -1,5 +1,5 @@
 from django.db import models
-from settings_app import settings
+from habits import settings
 from django.core.exceptions import ValidationError
 
 
