@@ -38,14 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_celery_beat'
+    'django_celery_beat',
     "rest_framework",
     "corsheaders",
     "habits",
     'users',
-    'drf_yasg'
-    
-    'settings_app'
+    'drf_yasg',
+
 
 ]
 
@@ -147,7 +146,7 @@ CELERY_TASK_TRACK_STARTED = True
 CELERY_TASK_TIME_LIMIT = 30 * 60
 CELERY_BEAT_SCHEDULE = {
     'send_messages_to_users': {
-        'task': 'habits.tasks.send_messages_to_users',
+        'task': 'users.tasks.send_messages_to_users',
         'schedule': timedelta(hours=1),  # выполнить каждый час
     },
 }

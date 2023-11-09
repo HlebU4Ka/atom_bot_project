@@ -1,7 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
-from django import forms
-from django.contrib.auth.forms import UserCreationForm
 
 
 # Create your models here.
@@ -87,9 +85,4 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
 
 # Форма для регистрации
-class CustomUserCreationForm(UserCreationForm):
-    user_id = forms.CharField(max_length=255, required=False)
 
-    class Meta(UserCreationForm.Meta):
-        model = CustomUser
-        fields = UserCreationForm.Meta.fields + ('user_id',)

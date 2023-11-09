@@ -29,8 +29,6 @@ H
 settings_app/settings.py,1\5\158bab0b507ea3115f151d37b36a9af2f88d717c
 9
 	manage.py,3\1\3156ad13e4d695cd526bbb7b031016ecba842270
-8
-tasks.py,8\1\81724b6c348c66b3ce4a7f36d24d0849ab270dfe
 D
 settings_app/wsgi.py,a\c\ac778d62658f1b381007775bbd05df38558efe73
 D
@@ -61,8 +59,6 @@ w
 G.idea/sonarlint/issuestore/c/0/c0132b4deeb3ef4d608db179d07cbf15fa7d8465,1\6\16165615cbf72d99c6e7283a62f2443f02879b57
 w
 G.idea/sonarlint/issuestore/c/8/c83d54592306ac7f67c6441824020867bdeb1f25,8\6\868bd239bf8cc66d34305ff570e9ca60597ae962
-w
-G.idea/sonarlint/issuestore/8/1/81724b6c348c66b3ce4a7f36d24d0849ab270dfe,b\c\bc104e964bde4db9f5197aca44c593d461c892cc
 w
 G.idea/sonarlint/issuestore/2/3/233a16b9bcdb821f3598bcbef17c91efb65fa793,6\6\66d4b2f3bd2b80436cf857e68da8290167f43546
 w
@@ -122,8 +118,6 @@ Q.idea/sonarlint/securityhotspotstore/5/4/547f374cbbeef99e636bc50f0d5b5ba07651ac
 
 Q.idea/sonarlint/securityhotspotstore/4/b/4ba4c813953c95856d1a2c2d4283bdcf3c76e9d9,e\5\e507abfa9515547ed1e6c19f53a7b3fef55e3142
 
-Q.idea/sonarlint/securityhotspotstore/8/1/81724b6c348c66b3ce4a7f36d24d0849ab270dfe,b\1\b1331eddf22a0849e63a84c6dea48ac2b5e04e79
-
 Q.idea/sonarlint/securityhotspotstore/3/1/3156ad13e4d695cd526bbb7b031016ecba842270,3\1\3102bcb3c0f503ac2eb74dd91f359d9124615aa8
 w
 G.idea/sonarlint/issuestore/5/f/5fc54a09665485d90807a8e72925d27743a0db75,b\8\b8d87d803db8673131d0914427ca63ebc2c35f4d
@@ -139,5 +133,33 @@ Cusers/migrations/0003_customuser_massage_text_customuser_user_id.py,b\1\b13415
 poetry.lock,0\0\0068a1506b061a8948c37d78b0dd5697211558d3
 H
 settings_app/telegram.py,3\a\3a85d84eb49766e9552d7713a23f87ade03aa152
+A
+users/__init__.py,f\e\febbc4ea5b538b4c8ea1a8875d49dfd1a2ae1a60
+B
+habits/__init__.py,a\b\ab195798494aabb469bfb8ceb02096440e5cd255
+F
+settings_app/celery.py,6\d\6d255ef0562e4681e37d3c630d0fbfd8a36c24a0
+D
+settings_app/asgi.py,7\8\78a83a8f411163a7e2b14aac687519d70b6b394a
+>
+habits/apps.py,6\d\6db7f431c8065cd1fb9f7b0163d6757720d103e7
 ?
-celery_start.py,5\7\57e5311517366d543d00b6a97fda4c5117a5f9a5
+habits/admin.py,2\0\20459a1dbfadc340023e406211ca1a568dccfdad
+?
+habits/tests.py,c\9\c9dcb5c610bd105dbc8fdfe456ae3feaf3b92aeb
+>
+users/admin.py,3\e\3ea505836db8ef76dd1c89a43cfc6ee4cd79a896
+>
+users/tasks.py,4\1\41cb9452ffe44a0fd5e523dbecab8d0eaa9151a5
+;
+__init__.py,6\0\60ad4f3d2e9b04a9b0a0bb97ab6a8a4c018b785e
+?
+users/celery.py,b\c\bc96129281b2d75892850c58ee92e162af773bdc
+9
+	celery.py,6\e\6ea84e3415a021bde7f36bb801845c3fff5fac08
+@
+celery_config.py,e\3\e34a52a07fe9e5e5b2dfd52f54bd1c0c2dca85f8
+H
+settings_app/__init__.py,c\7\c73fcea63237d573cb77427900635a73c3664c25
+M
+settings_app/celery_config.py,6\e\6e6f0f6dbb9655acaa0ed517875eade4638b6936
