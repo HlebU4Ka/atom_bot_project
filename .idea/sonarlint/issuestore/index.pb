@@ -137,8 +137,6 @@ A
 users/__init__.py,f\e\febbc4ea5b538b4c8ea1a8875d49dfd1a2ae1a60
 B
 habits/__init__.py,a\b\ab195798494aabb469bfb8ceb02096440e5cd255
-F
-settings_app/celery.py,6\d\6d255ef0562e4681e37d3c630d0fbfd8a36c24a0
 D
 settings_app/asgi.py,7\8\78a83a8f411163a7e2b14aac687519d70b6b394a
 >
@@ -149,17 +147,11 @@ D
 habits/tests.py,c\9\c9dcb5c610bd105dbc8fdfe456ae3feaf3b92aeb
 >
 users/admin.py,3\e\3ea505836db8ef76dd1c89a43cfc6ee4cd79a896
->
-users/tasks.py,4\1\41cb9452ffe44a0fd5e523dbecab8d0eaa9151a5
-;
-__init__.py,6\0\60ad4f3d2e9b04a9b0a0bb97ab6a8a4c018b785e
-?
-users/celery.py,b\c\bc96129281b2d75892850c58ee92e162af773bdc
-9
-	celery.py,6\e\6ea84e3415a021bde7f36bb801845c3fff5fac08
-@
-celery_config.py,e\3\e34a52a07fe9e5e5b2dfd52f54bd1c0c2dca85f8
 H
 settings_app/__init__.py,c\7\c73fcea63237d573cb77427900635a73c3664c25
 M
 settings_app/celery_config.py,6\e\6e6f0f6dbb9655acaa0ed517875eade4638b6936
+F
+settings_app/celery.py,6\d\6d255ef0562e4681e37d3c630d0fbfd8a36c24a0
+>
+users/tasks.py,4\1\41cb9452ffe44a0fd5e523dbecab8d0eaa9151a5
