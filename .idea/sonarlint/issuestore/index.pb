@@ -45,3 +45,7 @@ D
 users/urls.py,7\e\7ebb6dc32a2768a7e73ce1c83409f9c85bd4ad6a
 >
 users/views.py,5\f\5fc54a09665485d90807a8e72925d27743a0db75
+H
+settings_app/__init__.py,c\7\c73fcea63237d573cb77427900635a73c3664c25
+>
+pyproject.toml,5\d\5d07e7d72637aa0d59c89d381fe6dc4cf46e2491
