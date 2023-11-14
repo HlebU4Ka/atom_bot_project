@@ -49,3 +49,9 @@ H
 settings_app/__init__.py,c\7\c73fcea63237d573cb77427900635a73c3664c25
 >
 pyproject.toml,5\d\5d07e7d72637aa0d59c89d381fe6dc4cf46e2491
+E
+settings_app/tasks.py,1\d\1d1ce4448650cd688c659e6747b568169c2fb34e
+F
+settings_app/celery.py,6\d\6d255ef0562e4681e37d3c630d0fbfd8a36c24a0
+;
+poetry.lock,0\0\0068a1506b061a8948c37d78b0dd5697211558d3
