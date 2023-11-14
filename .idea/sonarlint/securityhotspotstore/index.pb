@@ -55,3 +55,13 @@ F
 settings_app/celery.py,6\d\6d255ef0562e4681e37d3c630d0fbfd8a36c24a0
 ;
 poetry.lock,0\0\0068a1506b061a8948c37d78b0dd5697211558d3
+>
+users/admin.py,3\e\3ea505836db8ef76dd1c89a43cfc6ee4cd79a896
+?
+habits/admin.py,2\0\20459a1dbfadc340023e406211ca1a568dccfdad
+>
+habits/apps.py,6\d\6db7f431c8065cd1fb9f7b0163d6757720d103e7
+?
+habits/tests.py,c\9\c9dcb5c610bd105dbc8fdfe456ae3feaf3b92aeb
+A
+settings_app/1.py,c\1\c1f76af90979cbdb91236ab671bbe107e195ee9e

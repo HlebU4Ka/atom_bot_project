@@ -2,7 +2,7 @@ from celery import Celery
 from datetime import datetime, timedelta
 import telebot
 
-app = Celery("celery_task", broker='pyamqp://guest:guest@localhost//')
+app = Celery("settings_app", broker='pyamqp://guest:guest@localhost//')
 
 TELEGRAM_API_TOKEN = "TELEGRAM_BOT_API_KEY"
 

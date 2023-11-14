@@ -1,16 +1,16 @@
-import os
 from celery import Celery
+import os
 
-# Set the default Django settings module for the 'celery' program.
+from django.conf import settings
+from celery import schedules
+# Установите переменную DJANGO_SETTINGS_MODULE в файле settings.py
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'settings_app.settings')
 
+# Создайте экземпляр Celery
 app = Celery('settings_app')
 
-# Using a string here means the worker doesn't have to serialize
-# the configuration object to child processes.
-# - namespace='CELERY' means all celery-related configuration keys
-#   should have a `CELERY_` prefix.
+# Загрузите настройки из файла settings.py
 app.config_from_object('django.conf:settings', namespace='CELERY')
 
-# Load task modules from all registered Django apps.
-app.autodiscover_tasks()
+# Автоматически загрузите задачи из всех файлов tasks.py в приложениях Django
+app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)

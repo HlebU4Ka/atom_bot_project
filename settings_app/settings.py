@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-9ya%3p+=$kh1o@(ghww%7b68t1mgf7xf1w25*nnlrd#@6y$k5j'
+SECRET_KEY = 'SECRET_KEY'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -132,25 +132,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'users.CustomUser'
 
-CELERY_BROKER_URL = 'redis://localhost:6379/0'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
-CELERY_IMPORTS = 'settings_app.tasks'
-
-CELERY_BEAT_SCHEDULE = {
-    'send-messages-to-users': {
-        'task': 'settings_app.tasks.send_messages_to_users',
-        'schedule': timedelta(hours=1),  # выполнить каждый час
-    },
-}
-
-CORS_ALLOW_METHODS = [
-    'DELETE',  # Разрешить HTTP-метод DELETE
-    'GET',  # Разрешить HTTP-метод GET
-    'OPTIONS',  # Разрешить HTTP-метод OPTIONS
-    'PATCH',  # Разрешить HTTP-метод PATCH
-    'POST',  # Разрешить HTTP-метод POST
-    'PUT',  # Разрешить HTTP-метод PUT
-]
 
 CORS_ALLOW_ALL_ORIGINS = True  # Разрешить доступ со всех источников
 
@@ -169,6 +150,29 @@ CELERY_TASK_TRACK_STARTED = True
 
 # Максимальное время на выполнение задачи
 CELERY_TASK_TIME_LIMIT = 30 * 60
+
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+
+CELERY_IMPORTS = 'settings_app.tasks'
+
+CELERY_BEAT_SCHEDULE = {
+    'schedule_habit_notification': {
+        'task': 'tasks.schedule_habit_notification',
+        'schedule': timedelta(hours=1),  # выполнить каждый час
+    },
+}
+
+CORS_ALLOW_METHODS = [
+    'DELETE',  # Разрешить HTTP-метод DELETE
+    'GET',  # Разрешить HTTP-метод GET
+    'OPTIONS',  # Разрешить HTTP-метод OPTIONS
+    'PATCH',  # Разрешить HTTP-метод PATCH
+    'POST',  # Разрешить HTTP-метод POST
+    'PUT',  # Разрешить HTTP-метод PUT
+]
+
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
