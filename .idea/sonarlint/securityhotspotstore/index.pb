@@ -29,8 +29,6 @@ H
 settings_app/settings.py,1\5\158bab0b507ea3115f151d37b36a9af2f88d717c
 9
 	manage.py,3\1\3156ad13e4d695cd526bbb7b031016ecba842270
-8
-tasks.py,8\1\81724b6c348c66b3ce4a7f36d24d0849ab270dfe
 D
 settings_app/wsgi.py,a\c\ac778d62658f1b381007775bbd05df38558efe73
 D
@@ -63,5 +61,9 @@ F
 habits/apps.py,6\d\6db7f431c8065cd1fb9f7b0163d6757720d103e7
 ?
 habits/tests.py,c\9\c9dcb5c610bd105dbc8fdfe456ae3feaf3b92aeb
-A
-settings_app/1.py,c\1\c1f76af90979cbdb91236ab671bbe107e195ee9e
+G
+celerybeat-schedule.bak,c\d\cd36c1fab9729800fcbc94b306a4402887c3702f
+G
+celerybeat-schedule.dir,d\6\d63ecf224f2f7b61685d704515b28f1473c4c553
+@
+requirements.txt,1\9\19359a61ae2446b51b549167b014da2fcf265768
