@@ -3,6 +3,7 @@ import os
 
 from django.conf import settings
 from celery import schedules
+
 # Установите переменную DJANGO_SETTINGS_MODULE в файле settings.py
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'settings_app.settings')
 
